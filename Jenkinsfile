@@ -9,12 +9,14 @@ pipeline {
     stages {
         stage('cloning the repo') {
             steps {
-                git branch: 'main', url: 'https://github.com/shaikhnomi/nodejs-practice.git'
+                // Fixed the missing quote at the end of the URL
+                git branch: 'main', 
+                    credentialsId: 'github-token', 
+                    url: 'https://github.com/muhammadhassan120/docker-cicd'
             }
         }
         stage('build docker image') {
             steps {
-                // Using double quotes for reliable variable interpolation
                 sh "docker build -t ${IMAGE_NAME} ."
             }
         }
@@ -30,7 +32,6 @@ pipeline {
             }
         }
     }
-    // Post block runs regardless of whether stages succeeded or failed
     post {
         success {
             emailext (
