@@ -1,8 +1,10 @@
-FROM node:18-alpine
+FROM node:20-alpine
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
-RUN npm build
+# Changed to 'npm run build'
+RUN npm run build
 EXPOSE 3000
-CMD ["node , dist/main"]
+# Fixed CMD syntax array and added .js
+CMD ["node", "dist/main.js"]
