@@ -10,7 +10,7 @@ pipeline {
         stage('cloning the repo') {
             steps {
                 // Fixed the missing quote at the end of the URL
-                git branch: 'main', 
+                git branch: 'master',
                     credentialsId: 'github-token', 
                     url: 'https://github.com/muhammadhassan120/docker-cicd'
             }
