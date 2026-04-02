@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
-import { Copy, Github, Linkedin, ExternalLink, Terminal, ChevronRight, Check } from "lucide-react";
+import { Copy, GitHub, Linkedin, ExternalLink, Terminal, ChevronRight, Check } from "lucide-react";
 
-export default function Portfolio() {
+export default function App() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [cursorPos, setCursorPos] = useState({ x: -100, y: -100 });
