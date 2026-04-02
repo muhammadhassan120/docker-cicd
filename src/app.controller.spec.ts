@@ -15,8 +15,9 @@ describe('AppController', () => {
   });
 
   describe('root', () => {
-    it('should return "Hello World!"', () => {
-      expect(appController.getHello()).toBe('Hello World!');
+    it('should return "Backend is running. API is ready."', () => {
+      // Changed the expected string here to match your service
+      expect(appController.getHello()).toBe('Backend is running. API is ready.');
     });
   });
 });
