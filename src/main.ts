@@ -3,7 +3,8 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  const port = process.env.PORT || 8080;
+  // Changed 8080 to 3000
+  const port = process.env.PORT || 3000; 
   await app.listen(port);
   console.log(`Portfolio server running on port ${port}`);
 }
