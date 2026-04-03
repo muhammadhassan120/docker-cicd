@@ -1763,6 +1763,6 @@ export class AppService {
     })();
   </script>
 </body>
-</html>
+</html>`;
   }
 }
